@@ -21,6 +21,7 @@ export function Cabecalho({
         <a href="#sobre">{t.navegacao.sobre}</a>
         <a href="#servicos">{t.navegacao.servicos}</a>
         <a href="#projetos">{t.navegacao.projetos}</a>
+        {/* <a href="#assistente">{t.navegacao.assistente}</a> */}
         <a href="#orcamento">{t.navegacao.orcamento}</a>
         <a href="#contato">{t.navegacao.contacto}</a>
       </nav>
@@ -51,4 +52,4 @@ export function Cabecalho({
       </div>
     </header>
   );
-}
+            }
