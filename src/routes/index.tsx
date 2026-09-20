@@ -5,6 +5,7 @@ import { Cabecalho } from "../components/site/cabecalho";
 import { ContactoRodape, Destaque, Estatisticas } from "../components/site/destaque";
 import { Projetos, Servicos, Sobre } from "../components/site/secoes";
 import { Orcamento } from "../components/site/orcamento";
+// import { Assistente } from "../components/site/assistente";
 import { usarIdioma } from "../components/site/usar-idioma";
 
 // Todo o conteúdo (PT/EN) e os dados de SEO vêm de src/content/site.ts
@@ -131,6 +132,7 @@ function PaginaInicial() {
       <Servicos conteudo={conteudo} />
       <Projetos conteudo={conteudo} />
       <Sobre conteudo={conteudo} />
+      {/* <Assistente conteudo={conteudo} idioma={idioma} /> */}
       <Orcamento conteudo={conteudo} idioma={idioma} />
       <ContactoRodape conteudo={conteudo} />
       <footer>
@@ -140,4 +142,4 @@ function PaginaInicial() {
       </footer>
     </main>
   );
-}
+      }
