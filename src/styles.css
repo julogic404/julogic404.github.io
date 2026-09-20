@@ -200,3 +200,18 @@ main p [data-glitch]::after {
 .alternador-idioma button:hover{opacity:.85}
 .alternador-idioma button.active{opacity:1;background:var(--glow)}
 @media (max-width:900px){.acoes-cabecalho{gap:8px}.alternador-idioma button{width:26px}}
+
+/* Assistente IA — recomendações de serviços e projetos */
+.painel-assistente{padding:25px;display:grid;gap:16px}
+.assistente-descricao{margin:0;font-size:11px;color:var(--muted-foreground);line-height:1.7;max-width:620px}
+.painel-assistente form{display:grid;gap:14px;justify-items:start}
+.painel-assistente form .campo{width:100%}
+.painel-assistente button[disabled]{opacity:.6;transform:none;cursor:progress}
+.assistente-resultado{border-top:1px solid var(--border);padding-top:16px;display:grid;gap:12px;justify-items:start}
+.assistente-resumo{margin:0;font-size:12px;line-height:1.7}
+.assistente-grupo{display:grid;gap:6px}
+.assistente-grupo strong{font-size:9px;color:var(--primary);letter-spacing:.06em;text-transform:uppercase}
+.assistente-grupo p{margin:0;font-size:11px;color:var(--muted-foreground);line-height:1.7}
+.assistente-grupo ul{margin:0;padding-left:16px;display:grid;gap:4px}
+.assistente-grupo li{font-size:11px}
+.assistente-grupo a{color:var(--foreground);border-bottom:1px solid var(--primary)}
