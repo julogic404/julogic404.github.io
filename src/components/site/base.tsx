@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 import type { ProjetoConteudo } from "../../content/site";
 
 /** Imagem com proteção contra arrastar/guardar. */
@@ -40,6 +40,20 @@ export function PreviaProjeto({ projeto }: { projeto: ProjetoConteudo }) {
 }
 
 export function DownloadProjeto({ projeto }: { projeto: ProjetoConteudo }) {
+  // Projetos web abrem a demonstração numa nova aba; apps descarregam o APK.
+  if (projeto.urlDemo) {
+    return (
+      <a
+        className="download-projeto"
+        href={projeto.urlDemo}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${projeto.rotuloDownload}: ${projeto.titulo}`}
+      >
+        <ExternalLink size={12} /> {projeto.rotuloDownload}
+      </a>
+    );
+  }
   return (
     <a
       className="download-projeto"
