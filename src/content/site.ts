@@ -17,6 +17,11 @@ import recursoJulio from "../assets/julogic_studio.webp";
 import recursoAvisport from "../assets/avisport_palpites.webp";
 import recursoAngonurse from "../assets/angonurse_plus.webp";
 import recursoMindgames from "../assets/angonurse_mindgames.webp";
+import recursoCorporate from "../assets/demo_julogic_corporate.webp";
+import recursoJuloplay from "../assets/demo_juloplay.webp";
+import recursoUniversidade from "../assets/demo_julogic_university.webp";
+import recursoClinica from "../assets/demo_clinical_health.webp";
+import recursoLoja from "../assets/demo_ecomerce_store.webp";
 
 export type Idioma = "pt" | "en";
 
@@ -88,9 +93,22 @@ export const servicos = [
 /* ---------------------------------------------------------------------------
  * 4. PROJETOS RECENTES
  *    Para adicionar um projeto: copiar um bloco, trocar título, imagem
- *    (ver src/assets) e o link do APK.
+ *    (ver src/assets) e o link.
+ *      - App Android → preencher "urlDownload" (botão "Descarregar APK")
+ *      - Projeto web → preencher "urlDemo" (botão "Ver Demo")
  * ------------------------------------------------------------------------- */
-export const projetos = [
+export type ProjetoFonte = {
+  titulo: string;
+  imagem: string;
+  /** Link do APK (apps Android). */
+  urlDownload?: string;
+  /** Link da demonstração online (projetos web). */
+  urlDemo?: string;
+  pt: { etiquetas: string; rotuloDownload: string };
+  en: { etiquetas: string; rotuloDownload: string };
+};
+
+export const projetos: ProjetoFonte[] = [
   {
     titulo: "JulogicStudio",
     imagem: recursoJulio,
@@ -121,6 +139,41 @@ export const projetos = [
     urlDownload: "https://github.com/Angonurse/Apps/releases/download/v1.1.2/angonurse-mindgames.apk",
     pt: { etiquetas: "Android • Kotlin Jogos", rotuloDownload: "Descarregar APK" },
     en: { etiquetas: "Android • Kotlin Games", rotuloDownload: "Download APK" },
+  },
+  {
+    titulo: "Julogic Corporate",
+    imagem: recursoCorporate,
+    urlDemo: "https://demo-julogic-corporate.vercel.app/",
+    pt: { etiquetas: "Web • Site corporativo", rotuloDownload: "Ver Demo" },
+    en: { etiquetas: "Web • Corporate website", rotuloDownload: "View Demo" },
+  },
+  {
+    titulo: "JuloPLAY",
+    imagem: recursoJuloplay,
+    urlDemo: "https://demo-juloplay.vercel.app/",
+    pt: { etiquetas: "Web • Streaming de vídeo", rotuloDownload: "Ver Demo" },
+    en: { etiquetas: "Web • Video streaming", rotuloDownload: "View Demo" },
+  },
+  {
+    titulo: "Universidade Julogic",
+    imagem: recursoUniversidade,
+    urlDemo: "https://demo-julogic-university.vercel.app/",
+    pt: { etiquetas: "Web • Portal universitário", rotuloDownload: "Ver Demo" },
+    en: { etiquetas: "Web • University portal", rotuloDownload: "View Demo" },
+  },
+  {
+    titulo: "Mubissule — Clínica",
+    imagem: recursoClinica,
+    urlDemo: "https://demo-clinical-health.vercel.app/",
+    pt: { etiquetas: "Web • Clínica e saúde", rotuloDownload: "Ver Demo" },
+    en: { etiquetas: "Web • Clinic and health", rotuloDownload: "View Demo" },
+  },
+  {
+    titulo: "JulStore ON",
+    imagem: recursoLoja,
+    urlDemo: "https://demo-ecomerce-store.vercel.app/",
+    pt: { etiquetas: "Web • Loja online", rotuloDownload: "Ver Demo" },
+    en: { etiquetas: "Web • E-commerce store", rotuloDownload: "View Demo" },
   },
 ];
 
@@ -205,7 +258,7 @@ export type Moeda = (typeof moedas)[number];
 
 export const textos = {
   pt: {
-    navegacao: { inicio: "Home", sobre: "Sobre", servicos: "Serviços", projetos: "Projetos", orcamento: "Orçamento", contacto: "Contacto" },
+    navegacao: { inicio: "Home", sobre: "Sobre", servicos: "Serviços", projetos: "Projetos", assistente: "Assistente", orcamento: "Orçamento", contacto: "Contacto" },
     navegacaoRotulo: "Navegação principal",
     contratar: "Fale Conosco",
     apresentacaoChapeu: "Bem-vindo à",
@@ -281,9 +334,27 @@ export const textos = {
     localizacao: "Luanda, Angola",
     rodape: "JuLogic 404. Todos os direitos reservados.",
     rotuloIdioma: "Idioma",
+    assistente: {
+      chapeu: "Assistente IA",
+      titulo: "Descreva a sua ideia e receba sugestões",
+      descricao:
+        "Conte em poucas linhas o que pretende criar. A nossa assistente indica os serviços e os projetos do portefólio mais parecidos com a sua ideia.",
+      campo: "A sua ideia *",
+      placeholder: "Ex.: quero uma loja online para vender eletrónicos com pagamento e entrega em Luanda…",
+      botao: "Recomendar",
+      carregando: "A analisar a sua ideia…",
+      rotuloServicos: "Serviços recomendados",
+      rotuloProjetos: "Projetos parecidos",
+      rotuloPasso: "Próximo passo",
+      passoPadrao: "Peça um orçamento na secção abaixo e falamos sobre a sua ideia.",
+      erroCurto: "Descreva a sua ideia com um pouco mais de detalhe.",
+      erroFalhou: "Não foi possível gerar as sugestões agora. Tente novamente em instantes.",
+      erroCreditos: "O assistente está temporariamente indisponível. Fale conosco por email ou WhatsApp.",
+      irOrcamento: "Pedir orçamento",
+    },
   },
   en: {
-    navegacao: { inicio: "Home", sobre: "About", servicos: "Services", projetos: "Projects", orcamento: "Quote", contacto: "Contact" },
+    navegacao: { inicio: "Home", sobre: "About", servicos: "Services", projetos: "Projects", assistente: "Assistant", orcamento: "Quote", contacto: "Contact" },
     navegacaoRotulo: "Main navigation",
     contratar: "Work With Us",
     apresentacaoChapeu: "Welcome to",
@@ -359,6 +430,24 @@ export const textos = {
     localizacao: "Luanda, Angola",
     rodape: "JuLogic 404. All rights reserved.",
     rotuloIdioma: "Language",
+    assistente: {
+      chapeu: "AI Assistant",
+      titulo: "Describe your idea and get recommendations",
+      descricao:
+        "Tell us in a few lines what you want to build. Our assistant points out the services and portfolio projects closest to your idea.",
+      campo: "Your idea *",
+      placeholder: "E.g. I want an online store to sell electronics with payment and delivery in Luanda…",
+      botao: "Recommend",
+      carregando: "Analysing your idea…",
+      rotuloServicos: "Recommended services",
+      rotuloProjetos: "Similar projects",
+      rotuloPasso: "Next step",
+      passoPadrao: "Request a quote in the section below and let's talk about your idea.",
+      erroCurto: "Please describe your idea with a bit more detail.",
+      erroFalhou: "We couldn't generate recommendations right now. Please try again shortly.",
+      erroCreditos: "The assistant is temporarily unavailable. Reach us by email or WhatsApp.",
+      irOrcamento: "Request a quote",
+    },
   },
 };
 
@@ -376,7 +465,8 @@ export function conteudoPara(idioma: Idioma) {
     projetos: projetos.map((item) => ({
       titulo: item.titulo,
       imagem: item.imagem,
-      urlDownload: item.urlDownload,
+      urlDownload: item.urlDownload ?? "",
+      urlDemo: item.urlDemo ?? "",
       ...item[idioma],
     })),
     habilidades: habilidades.map((item) => ({ nome: item[idioma], valor: item.valor })),
