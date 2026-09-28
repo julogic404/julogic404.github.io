@@ -75,8 +75,8 @@ export const servicos = [
   },
   {
     icone: "smartphone" as NomeIcone,
-    pt: { titulo: "Aplicativos Mobile", texto: "Apps nativos e híbridos para Android e iOS com foco em performance e usabilidade." },
-    en: { titulo: "Mobile Apps", texto: "Native and hybrid apps for Android and iOS focused on performance and usability." },
+    pt: { titulo: "Aplicativos Mobile", texto: "Apps nativos e híbridos para Android com foco em performance e usabilidade." },
+    en: { titulo: "Mobile Apps", texto: "Native and hybrid apps for Android focused on performance and usability." },
   },
   {
     icone: "palette" as NomeIcone,
@@ -114,31 +114,31 @@ export const projetos: ProjetoFonte[] = [
     imagem: recursoJulio,
     urlDownload:
       "https://github.com/julogic404/Apps-JuLogic404/releases/download/v1.1.1/JulogicStudio-v1.1.1-release.apk",
-    pt: { etiquetas: "Android • Kotlin IDE", rotuloDownload: "Descarregar APK" },
-    en: { etiquetas: "Android • Kotlin IDE", rotuloDownload: "Download APK" },
+    pt: { etiquetas: "Android • Kotlin • IDE HTML", rotuloDownload: "Baixar APK" },
+    en: { etiquetas: "Android • Kotlin • IDE HTML", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AngoNurse + Estudar Saúde",
     imagem: recursoAngonurse,
     urlDownload:
       "https://github.com/Angonurse/Apps/releases/download/v1.0.0/Angonurse_Plus_-_Estudar_Saude.apk",
-    pt: { etiquetas: "Android • Kotlin Educação", rotuloDownload: "Descarregar APK" },
-    en: { etiquetas: "Android • Kotlin Education", rotuloDownload: "Download APK" },
+    pt: { etiquetas: "Android • Kotlin • Saúde", rotuloDownload: "Baixar APK" },
+    en: { etiquetas: "Android • Kotlin • Health", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AviSport — Palpites Bantubet",
     imagem: recursoAvisport,
     urlDownload:
       "https://github.com/julogic404/Apps-JuLogic404/releases/download/v1.0/AviSport_-_Palpites_Bantubet.apk",
-    pt: { etiquetas: "Android • Kotlin Palpites", rotuloDownload: "Descarregar APK" },
-    en: { etiquetas: "Android • Kotlin Betting Tips", rotuloDownload: "Download APK" },
+    pt: { etiquetas: "Android • Kotlin • Palpites • Aviator", rotuloDownload: "Descarregar APK" },
+    en: { etiquetas: "Android • Kotlin • Betting Tips • Aviator", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AngoNurse MindGames",
     imagem: recursoMindgames,
     urlDownload: "https://github.com/Angonurse/Apps/releases/download/v1.1.2/angonurse-mindgames.apk",
-    pt: { etiquetas: "Android • Kotlin Jogos", rotuloDownload: "Descarregar APK" },
-    en: { etiquetas: "Android • Kotlin Games", rotuloDownload: "Download APK" },
+    pt: { etiquetas: "Android • Kotlin • Jogos • Saúde", rotuloDownload: "Descarregar APK" },
+    en: { etiquetas: "Android • Kotlin • Games • Health", rotuloDownload: "Download APK" },
   },
   {
     titulo: "Julogic Corporate",
@@ -165,8 +165,8 @@ export const projetos: ProjetoFonte[] = [
     titulo: "Mubissule — Clínica",
     imagem: recursoClinica,
     urlDemo: "https://demo-clinical-health.vercel.app/",
-    pt: { etiquetas: "Web • Clínica e saúde", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • Clinic and health", rotuloDownload: "View Demo" },
+    pt: { etiquetas: "Web • Clínica • Saúde", rotuloDownload: "Ver Demo" },
+    en: { etiquetas: "Web • Clinic • health", rotuloDownload: "View Demo" },
   },
   {
     titulo: "JulStore ON",
@@ -187,7 +187,7 @@ export const habilidades = [
   { pt: "UI/UX Design", en: "UI/UX Design", valor: 75 },
   { pt: "Python", en: "Python", valor: 70 },
   { pt: "SQL / Banco de Dados", en: "SQL / Databases", valor: 75 },
-  { pt: "App Mobile (Java; Kotlin)", en: "Mobile Apps (Java; Kotlin)", valor: 80 },
+  { pt: "Java; Kotlin", en: "Java; Kotlin", valor: 90 },
 ];
 
 /** Ícones da pilha tecnológica (ver src/components/site/icones-tecnologia.tsx) */
@@ -195,20 +195,20 @@ export const tecnologias = ["JS", "TS", "React", "Next.js", "Python", "Java", "K
 
 export const experiencia = [
   {
-    empresa: "AngoInove",
+    empresa: "JuLogic 404",
     data: { pt: "2023 - Atual", en: "2023 - Present" },
-    pt: { cargo: "Desenvolvedor Full Stack", texto: "Desenvolvimento de plataformas web e mobile para a área da saúde com foco em performance." },
-    en: { cargo: "Full Stack Developer", texto: "Building web and mobile healthcare platforms with a strong focus on performance." },
+    pt: { cargo: "Desenvolvedor Full Stack", texto: "Desenvolvimento de plataformas web e mobile com foco em performance." },
+    en: { cargo: "Full Stack Developer", texto: "Building web and mobile platforms with a strong focus on performance." },
   },
   {
     empresa: "Freelancer",
     data: { pt: "2021 - 2023", en: "2021 - 2023" },
-    pt: { cargo: "Desenvolvedor Frontend", texto: "Criação de interfaces modernas e responsivas para diversos clientes e startups." },
-    en: { cargo: "Frontend Developer", texto: "Crafting modern, responsive interfaces for a range of clients and startups." },
+    pt: { cargo: "Desenvolvedor Frontend", texto: "Criação de interfaces modernas e responsivas para diversos clientes." },
+    en: { cargo: "Frontend Developer", texto: "Crafting modern, responsive interfaces for a range of clients." },
   },
   {
     empresa: "Projetos Pessoais",
-    data: { pt: "2020 - 2021", en: "2020 - 2021" },
+    data: { pt: "2018 - 2021", en: "2018 - 2021" },
     pt: { cargo: "Designer UI/UX", texto: "Desenvolvimento de conceitos visuais e experiências digitais centradas no usuário." },
     en: { cargo: "UI/UX Designer", texto: "Developing visual concepts and user-centred digital experiences." },
   },
@@ -220,7 +220,7 @@ export const experiencia = [
 export const seo = {
   titulo: "JuLogic 404: Portfólio - Full Stack e Apps",
   descricao:
-    "JuLogic 404: desenvolvimento de sites, aplicações web, apps Android em Kotlin e Java, UI/UX e SEO.",
+    "JuLogic 404: desenvolvemos sites, aplicações web, apps Android em Kotlin e Java, UI/UX e SEO.",
   descricaoSocial:
     "Ajudamos empresas e pessoas a transformarem ideias em produtos digitais modernos, rápidos e que realmente fazem sentido para os usuários.",
   palavrasChave:
