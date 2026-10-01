@@ -76,7 +76,7 @@ export const servicos = [
   {
     icone: "smartphone" as NomeIcone,
     pt: { titulo: "Aplicativos Mobile", texto: "Apps nativos e híbridos para Android com foco em performance e usabilidade." },
-    en: { titulo: "Mobile Apps", texto: "Native and hybrid apps for Android focused on performance and usability." },
+    en: { titulo: "Mobile Apps", texto: "Native and hybrid apps for Android and iOS focused on performance and usability." },
   },
   {
     icone: "palette" as NomeIcone,
@@ -115,64 +115,64 @@ export const projetos: ProjetoFonte[] = [
     urlDownload:
       "https://github.com/julogic404/Apps-JuLogic404/releases/download/v1.1.1/JulogicStudio-v1.1.1-release.apk",
     pt: { etiquetas: "Android • Kotlin • IDE HTML", rotuloDownload: "Baixar APK" },
-    en: { etiquetas: "Android • Kotlin • IDE HTML", rotuloDownload: "Download APK" },
+    en: { etiquetas: "Android • Kotlin IDE", rotuloDownload: "Download APK" },
   },
   {
-    titulo: "AngoNurse + Estudar Saúde",
+    titulo: "AngoNurse+ Estudar Saúde",
     imagem: recursoAngonurse,
     urlDownload:
       "https://github.com/Angonurse/Apps/releases/download/v1.0.0/Angonurse_Plus_-_Estudar_Saude.apk",
     pt: { etiquetas: "Android • Kotlin • Saúde", rotuloDownload: "Baixar APK" },
-    en: { etiquetas: "Android • Kotlin • Health", rotuloDownload: "Download APK" },
+    en: { etiquetas: "Android • Kotlin Education", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AviSport — Palpites Bantubet",
     imagem: recursoAvisport,
     urlDownload:
       "https://github.com/julogic404/Apps-JuLogic404/releases/download/v1.0/AviSport_-_Palpites_Bantubet.apk",
-    pt: { etiquetas: "Android • Kotlin • Palpites • Aviator", rotuloDownload: "Descarregar APK" },
-    en: { etiquetas: "Android • Kotlin • Betting Tips • Aviator", rotuloDownload: "Download APK" },
+    pt: { etiquetas: "Android • Kotlin • Aviator • Palpites", rotuloDownload: "Baixar APK" },
+    en: { etiquetas: "Android • Kotlin Betting Tips", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AngoNurse MindGames",
     imagem: recursoMindgames,
     urlDownload: "https://github.com/Angonurse/Apps/releases/download/v1.1.2/angonurse-mindgames.apk",
-    pt: { etiquetas: "Android • Kotlin • Jogos • Saúde", rotuloDownload: "Descarregar APK" },
-    en: { etiquetas: "Android • Kotlin • Games • Health", rotuloDownload: "Download APK" },
+    pt: { etiquetas: "Android • Kotlin • Jogos • Saúde", rotuloDownload: "Baixar APK" },
+    en: { etiquetas: "Android • Kotlin Games", rotuloDownload: "Download APK" },
   },
   {
     titulo: "Julogic Corporate",
     imagem: recursoCorporate,
     urlDemo: "https://demo-julogic-corporate.vercel.app/",
-    pt: { etiquetas: "Web • Site corporativo", rotuloDownload: "Ver Demo" },
+    pt: { etiquetas: "Web • Site Corporativo", rotuloDownload: "Ver Demo" },
     en: { etiquetas: "Web • Corporate website", rotuloDownload: "View Demo" },
   },
   {
     titulo: "JuloPLAY",
     imagem: recursoJuloplay,
     urlDemo: "https://demo-juloplay.vercel.app/",
-    pt: { etiquetas: "Web • Streaming de vídeo", rotuloDownload: "Ver Demo" },
+    pt: { etiquetas: "Web • Streaming de Vídeo", rotuloDownload: "Ver Demo" },
     en: { etiquetas: "Web • Video streaming", rotuloDownload: "View Demo" },
   },
   {
     titulo: "Universidade Julogic",
     imagem: recursoUniversidade,
     urlDemo: "https://demo-julogic-university.vercel.app/",
-    pt: { etiquetas: "Web • Portal universitário", rotuloDownload: "Ver Demo" },
+    pt: { etiquetas: "Web • Portal Universitário", rotuloDownload: "Ver Demo" },
     en: { etiquetas: "Web • University portal", rotuloDownload: "View Demo" },
   },
   {
-    titulo: "Mubissule — Clínica",
+    titulo: "JULOSAUDE — Clínica",
     imagem: recursoClinica,
     urlDemo: "https://demo-clinical-health.vercel.app/",
     pt: { etiquetas: "Web • Clínica • Saúde", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • Clinic • health", rotuloDownload: "View Demo" },
+    en: { etiquetas: "Web • Clinic and health", rotuloDownload: "View Demo" },
   },
   {
     titulo: "JulStore ON",
     imagem: recursoLoja,
     urlDemo: "https://demo-ecomerce-store.vercel.app/",
-    pt: { etiquetas: "Web • Loja online", rotuloDownload: "Ver Demo" },
+    pt: { etiquetas: "Web • Loja Online", rotuloDownload: "Ver Demo" },
     en: { etiquetas: "Web • E-commerce store", rotuloDownload: "View Demo" },
   },
 ];
@@ -187,7 +187,7 @@ export const habilidades = [
   { pt: "UI/UX Design", en: "UI/UX Design", valor: 75 },
   { pt: "Python", en: "Python", valor: 70 },
   { pt: "SQL / Banco de Dados", en: "SQL / Databases", valor: 75 },
-  { pt: "Java; Kotlin", en: "Java; Kotlin", valor: 90 },
+  { pt: "Java; Kotlin", en: "Mobile Apps (Java; Kotlin)", valor: 90 },
 ];
 
 /** Ícones da pilha tecnológica (ver src/components/site/icones-tecnologia.tsx) */
@@ -197,18 +197,18 @@ export const experiencia = [
   {
     empresa: "JuLogic 404",
     data: { pt: "2023 - Atual", en: "2023 - Present" },
-    pt: { cargo: "Desenvolvedor Full Stack", texto: "Desenvolvimento de plataformas web e mobile com foco em performance." },
-    en: { cargo: "Full Stack Developer", texto: "Building web and mobile platforms with a strong focus on performance." },
+    pt: { cargo: "Desenvolvedor Full Stack", texto: "Desenvolvimento de plataformas web e mobile para a área da saúde com foco em performance." },
+    en: { cargo: "Full Stack Developer", texto: "Building web and mobile healthcare platforms with a strong focus on performance." },
   },
   {
     empresa: "Freelancer",
     data: { pt: "2021 - 2023", en: "2021 - 2023" },
     pt: { cargo: "Desenvolvedor Frontend", texto: "Criação de interfaces modernas e responsivas para diversos clientes." },
-    en: { cargo: "Frontend Developer", texto: "Crafting modern, responsive interfaces for a range of clients." },
+    en: { cargo: "Frontend Developer", texto: "Crafting modern, responsive interfaces for a range of clients and startups." },
   },
   {
     empresa: "Projetos Pessoais",
-    data: { pt: "2018 - 2021", en: "2018 - 2021" },
+    data: { pt: "2018 - 2021", en: "2020 - 2021" },
     pt: { cargo: "Designer UI/UX", texto: "Desenvolvimento de conceitos visuais e experiências digitais centradas no usuário." },
     en: { cargo: "UI/UX Designer", texto: "Developing visual concepts and user-centred digital experiences." },
   },
@@ -244,7 +244,7 @@ export const seo = {
     {
       pergunta: "Posso descarregar os aplicativos do portefólio?",
       resposta:
-        "Sim. Os projetos JulogicStudio, AngoNurse + Estudar Saúde, AviSport e AngoNurse MindGames têm o APK disponível para descarregar na secção Projetos.",
+        "Sim. Os projetos JulogicStudio, AngoNurse+ Estudar Saúde, AviSport e AngoNurse MindGames têm o APK disponível para descarregar na secção Projetos.",
     },
   ],
 } as const;
