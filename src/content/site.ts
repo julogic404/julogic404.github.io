@@ -76,7 +76,7 @@ export const servicos = [
   {
     icone: "smartphone" as NomeIcone,
     pt: { titulo: "Aplicativos Mobile", texto: "Apps nativos e híbridos para Android com foco em performance e usabilidade." },
-    en: { titulo: "Mobile Apps", texto: "Native and hybrid apps for Android and iOS focused on performance and usability." },
+    en: { titulo: "Mobile Apps", texto: "Native and hybrid apps for Android focused on performance and usability." },
   },
   {
     icone: "palette" as NomeIcone,
@@ -115,7 +115,7 @@ export const projetos: ProjetoFonte[] = [
     urlDownload:
       "https://github.com/julogic404/Apps-JuLogic404/releases/download/v1.1.1/JulogicStudio-v1.1.1-release.apk",
     pt: { etiquetas: "Android • Kotlin • IDE HTML", rotuloDownload: "Baixar APK" },
-    en: { etiquetas: "Android • Kotlin IDE", rotuloDownload: "Download APK" },
+    en: { etiquetas: "Android • Kotlin • HTML IDE", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AngoNurse+ Estudar Saúde",
@@ -123,7 +123,7 @@ export const projetos: ProjetoFonte[] = [
     urlDownload:
       "https://github.com/Angonurse/Apps/releases/download/v1.0.0/Angonurse_Plus_-_Estudar_Saude.apk",
     pt: { etiquetas: "Android • Kotlin • Saúde", rotuloDownload: "Baixar APK" },
-    en: { etiquetas: "Android • Kotlin Education", rotuloDownload: "Download APK" },
+    en: { etiquetas: "Android • Kotlin • Health", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AviSport — Palpites Bantubet",
@@ -131,49 +131,49 @@ export const projetos: ProjetoFonte[] = [
     urlDownload:
       "https://github.com/julogic404/Apps-JuLogic404/releases/download/v1.0/AviSport_-_Palpites_Bantubet.apk",
     pt: { etiquetas: "Android • Kotlin • Aviator • Palpites", rotuloDownload: "Baixar APK" },
-    en: { etiquetas: "Android • Kotlin Betting Tips", rotuloDownload: "Download APK" },
+    en: { etiquetas: "Android • Kotlin • Aviator • Betting Tips", rotuloDownload: "Download APK" },
   },
   {
     titulo: "AngoNurse MindGames",
     imagem: recursoMindgames,
     urlDownload: "https://github.com/Angonurse/Apps/releases/download/v1.1.2/angonurse-mindgames.apk",
     pt: { etiquetas: "Android • Kotlin • Jogos • Saúde", rotuloDownload: "Baixar APK" },
-    en: { etiquetas: "Android • Kotlin Games", rotuloDownload: "Download APK" },
+    en: { etiquetas: "Android • Kotlin • Games • Health", rotuloDownload: "Download APK" },
   },
   {
     titulo: "Julogic Corporate",
     imagem: recursoCorporate,
     urlDemo: "https://demo-julogic-corporate.vercel.app/",
     pt: { etiquetas: "Web • Site Corporativo", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • Corporate website", rotuloDownload: "View Demo" },
+    en: { etiquetas: "Web • Corporate Website", rotuloDownload: "View Demo" },
   },
   {
     titulo: "JuloPLAY",
     imagem: recursoJuloplay,
     urlDemo: "https://demo-juloplay.vercel.app/",
     pt: { etiquetas: "Web • Streaming de Vídeo", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • Video streaming", rotuloDownload: "View Demo" },
+    en: { etiquetas: "Web • Video Streaming", rotuloDownload: "View Demo" },
   },
   {
     titulo: "Universidade Julogic",
     imagem: recursoUniversidade,
     urlDemo: "https://demo-julogic-university.vercel.app/",
     pt: { etiquetas: "Web • Portal Universitário", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • University portal", rotuloDownload: "View Demo" },
+    en: { etiquetas: "Web • University Portal", rotuloDownload: "View Demo" },
   },
   {
     titulo: "JULOSAUDE — Clínica",
     imagem: recursoClinica,
     urlDemo: "https://demo-clinical-health.vercel.app/",
     pt: { etiquetas: "Web • Clínica • Saúde", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • Clinic and health", rotuloDownload: "View Demo" },
+    en: { etiquetas: "Web • Clinic • Health", rotuloDownload: "View Demo" },
   },
   {
     titulo: "JulStore ON",
     imagem: recursoLoja,
     urlDemo: "https://demo-ecomerce-store.vercel.app/",
     pt: { etiquetas: "Web • Loja Online", rotuloDownload: "Ver Demo" },
-    en: { etiquetas: "Web • E-commerce store", rotuloDownload: "View Demo" },
+    en: { etiquetas: "Web • Online Store", rotuloDownload: "View Demo" },
   },
 ];
 
@@ -187,7 +187,7 @@ export const habilidades = [
   { pt: "UI/UX Design", en: "UI/UX Design", valor: 75 },
   { pt: "Python", en: "Python", valor: 70 },
   { pt: "SQL / Banco de Dados", en: "SQL / Databases", valor: 75 },
-  { pt: "Java; Kotlin", en: "Mobile Apps (Java; Kotlin)", valor: 90 },
+  { pt: "Java; Kotlin", en: "Java; Kotlin", valor: 90 },
 ];
 
 /** Ícones da pilha tecnológica (ver src/components/site/icones-tecnologia.tsx) */
@@ -208,7 +208,7 @@ export const experiencia = [
   },
   {
     empresa: "Projetos Pessoais",
-    data: { pt: "2018 - 2021", en: "2020 - 2021" },
+    data: { pt: "2018 - 2021", en: "2018 - 2021" },
     pt: { cargo: "Designer UI/UX", texto: "Desenvolvimento de conceitos visuais e experiências digitais centradas no usuário." },
     en: { cargo: "UI/UX Designer", texto: "Developing visual concepts and user-centred digital experiences." },
   },
