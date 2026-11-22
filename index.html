@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JuLogic 404 — Full Stack & Experience Design Studio</title>
+  <meta name="description" content="Portfólio da JuLogic 404: desenvolvimento web, apps Android e design UI/UX. Projetos entregues, serviços e contato.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://julogic404.github.io/">
+
+  <meta property="og:title" content="JuLogic 404 — Portfólio">
+  <meta property="og:description" content="Desenvolvimento web, apps Android e UI/UX.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://julogic404.github.io/">
+  <meta property="og:image" content="https://julogic404.github.io/julogic_hub.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JuLogic 404 — Portfólio">
+  <meta name="twitter:description" content="Desenvolvimento web, apps Android e UI/UX.">
+</head>
   <title>JuLogic 404 · Portfólio</title>
   <style>
-    /* Reset e configuração para ocupar toda a tela */
-    * {
+     {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -15,12 +31,11 @@
     html, body {
       width: 100%;
       height: 100%;
-      overflow: hidden;          /* remove barras de rolagem do body */
-      background-color: #0b0d10; /* cor de fundo escura, combinando com o portfólio */
+      overflow: hidden;          
+      background-color: #0b0d10; 
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     }
 
-    /* Container principal que segura o iframe */
     .browser-wrapper {
       position: relative;
       width: 100%;
@@ -32,17 +47,15 @@
       justify-content: center;
     }
 
-    /* O iframe ocupa 100% da tela, sem bordas, sem margens */
     .browser-frame {
       width: 100%;
       height: 100%;
       border: none;
       display: block;
-      background: #ffffff; /* fallback enquanto carrega */
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset; /* borda sutil */
+      background: #ffffff; 
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset; 
     }
 
-    /* Opcional: overlay de carregamento rápido (desaparece quando iframe carrega) */
     .loading-overlay {
       position: absolute;
       top: 0;
@@ -58,7 +71,7 @@
       letter-spacing: 1px;
       opacity: 1;
       transition: opacity 0.6s ease;
-      pointer-events: none;    /* não bloqueia cliques após sumir */
+      pointer-events: none;    
       z-index: 10;
     }
 
@@ -66,7 +79,7 @@
       opacity: 0;
     }
 
-    /* Créditos minúsculos (opcional, mas removível) – garantem que o domínio não apareça */
+
     .no-domain {
       position: absolute;
       bottom: 6px;
@@ -80,7 +93,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Remove qualquer possível texto do domínio antigo */
     .no-domain span {
       display: none;
     }
@@ -88,16 +100,11 @@
 </head>
 <body>
   <div class="browser-wrapper">
-    <!-- Overlay de carregamento (desaparece após o iframe carregar) -->
     <div class="loading-overlay" id="loadingOverlay">
       <span>carregando portfólio…</span>
     </div>
 
-    <!-- 
-      IFRAME: carrega o site original https://julogic-portfolio.vercel.app/
-      O domínio NÃO é exibido em nenhum lugar da página.
-      A barra de endereços não existe, o iframe é fullscreen.
-    -->
+    
     <iframe
       class="browser-frame"
       id="portfolioFrame"
@@ -109,23 +116,21 @@
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
 
-    <!-- Elemento puramente decorativo para garantir que nada do domínio apareça -->
+
     <div class="no-domain">
-      <span>original: julogic-portfolio.vercel.app</span> <!-- oculto via CSS -->
-      ✦ JuLogic 404
+      <span>original: julogic-portfolio.vercel.app</span> 
+      JuLogic 404
     </div>
   </div>
 
   <script>
     (function() {
-      // Quando o iframe terminar de carregar, escondemos o overlay de carregamento.
       const iframe = document.getElementById('portfolioFrame');
       const overlay = document.getElementById('loadingOverlay');
 
       function hideOverlay() {
         if (overlay) {
           overlay.classList.add('hide');
-          // Remove o overlay após a transição para evitar qualquer interferência
           setTimeout(() => {
             if (overlay.parentNode) {
               overlay.style.display = 'none';
@@ -134,36 +139,21 @@
         }
       }
 
-      // Evento de load do iframe (dispara quando todo o conteúdo estiver carregado)
       iframe.addEventListener('load', function() {
-        // Pequeno atraso para garantir que a transição seja suave
         setTimeout(hideOverlay, 150);
       });
 
-      // Fallback: se o iframe já estiver carregado (cache), esconde após 1.5s
       setTimeout(() => {
-        // Se o overlay ainda estiver visível, esconde de qualquer forma
         if (overlay && !overlay.classList.contains('hide')) {
           hideOverlay();
         }
       }, 2500);
 
-      // Garante que o overlay suma imediatamente se o iframe já estiver com src carregado
-      // (verificação extra para navegadores que cacheiam agressivamente)
       if (iframe.contentWindow && iframe.contentWindow.document.readyState === 'complete') {
         hideOverlay();
       }
-
-      // Impede que qualquer link externo abra fora do iframe? 
-      // Não é necessário, o iframe tem comportamento padrão. Mas mantemos o foco.
-      // O domínio não é mostrado em momento algum na interface.
     })();
   </script>
 
-  <!-- 
-    Nenhum texto de domínio visível. 
-    O título da página é "JuLogic 404 · Portfólio" – neutro.
-    O iframe ocupa toda a área útil, simulando um navegador sem barra de endereços.
-  -->
 </body>
 </html>
